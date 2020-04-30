@@ -6,12 +6,22 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Input, Button } from 'react-native-elements';
 import Constants from 'expo-constants';
-
+import SoundPlayer from 'react-native-sound-player'
+SoundPlayer.loadSoundFile('test','mp3');
 const Stack = createStackNavigator();
 function Separator() {
   return <View style={styles.separator} />;
 }
+function playSong() {
+  try {
+    SoundPlayer.play()
+  } catch (e) {
+    alert('Cannot play the file')
+    console.log('cannot play the song file', e)
+  }
+}
 function HomeScreen({ navigation }) {
+  {playSong();}
   return (
     //Color scheme scientifically proven to be comforting
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#86CD99' }}>
