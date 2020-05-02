@@ -6,22 +6,20 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Input, Button } from 'react-native-elements';
 import Constants from 'expo-constants';
-import SoundPlayer from 'react-native-sound-player'
-SoundPlayer.loadSoundFile('test','mp3');
+import { Audio, Video } from 'expo-av';
+var x=1
+const playbackObject = new Audio.Sound();
 const Stack = createStackNavigator();
 function Separator() {
   return <View style={styles.separator} />;
 }
-function playSong() {
-  try {
-    SoundPlayer.play()
-  } catch (e) {
-    alert('Cannot play the file')
-    console.log('cannot play the song file', e)
-  }
-}
+
 function HomeScreen({ navigation }) {
-  {playSong();}
+  (async () => {
+    await 
+    await playbackObject.loadAsync(require('./assets/meditationMusic.mp3'), initialStatus = {}, downloadFirst = true)
+     await playbackObject.playAsync()
+  })();
   return (
     //Color scheme scientifically proven to be comforting
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#86CD99' }}>
@@ -116,35 +114,51 @@ function HomeScreen({ navigation }) {
   );
 }
 function meditationScreen({ navigation }) {
+    (async () => {
+      await
+      await playbackObject.stopAsync()
+    })();
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text> Welcome to the Zen room</Text>
       <Text> {'\n'} </Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go to Home" onPress={() => { (navigation.navigate('Home')); playbackObject.playAsync()}} />
     </View>
   );
 }
 function spiritsScreen({ navigation }) {
+  (async () => {
+    await
+      await playbackObject.stopAsync()
+  })();
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text> Lift your spirits!</Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go to Home" onPress={() => { (navigation.navigate('Home')); playbackObject.playAsync()}} />
     </View>
   );
 }
 function othersScreen({ navigation }) {
+  (async () => {
+    await
+      await playbackObject.stopAsync()
+  })();
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text> Hear from others!</Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go to Home" onPress={() => { (navigation.navigate('Home')); playbackObject.playAsync()}} />
     </View>
   );
 }
 function suggestionsScreen({ navigation }) {
+  (async () => {
+    await
+      await playbackObject.stopAsync()
+  })();
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text> Suggestions from the community-- we'll get through this together!</Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go to Home" onPress={() => { (navigation.navigate('Home')); playbackObject.playAsync()}} />
     </View>
   );
 }
@@ -164,6 +178,7 @@ function App() {
               fontSize: 30
             },
           }}
+
         />
         <Stack.Screen name="Meditation" component={meditationScreen}
           options={{
