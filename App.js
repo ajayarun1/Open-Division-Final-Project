@@ -7,18 +7,34 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Input, Button } from 'react-native-elements';
 import Constants from 'expo-constants';
 import { Audio, Video } from 'expo-av';
-var x=1
+import Hyperlink from 'react-native-hyperlink'
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Linking } from 'react-native'
+
 const playbackObject = new Audio.Sound();
+const meditationWalthrough1 = new Audio.Sound();
 const Stack = createStackNavigator();
 function Separator() {
   return <View style={styles.separator} />;
 }
+var i = 2
+function pauseResume() {
+  if (i % 2 == 0) {
+    meditationWalthrough1.pauseAsync()
+  }
+  if (i % 2 !== 0) {
+    meditationWalthrough1.playAsync()
+  }
+}
 
+//NOTE TO SELF (5/2): add another mp3 file for mediation walkthrough in the meditation screen, leave no audio in help from others, and add motivational music in moving forward screen
+// After completing audio, work on adding text and info to the three screens
 function HomeScreen({ navigation }) {
+  //Serene music plays to battle depressed feelings, different audio for each screen
   (async () => {
-    await 
-    await playbackObject.loadAsync(require('./assets/meditationMusic.mp3'), initialStatus = {}, downloadFirst = true)
-     await playbackObject.playAsync()
+    await
+      await playbackObject.loadAsync(require('./assets/meditationMusic.mp3'), initialStatus = {}, downloadFirst = true)
+    await playbackObject.playAsync()
   })();
   return (
     //Color scheme scientifically proven to be comforting
@@ -113,16 +129,63 @@ function HomeScreen({ navigation }) {
 
   );
 }
+var x = 1;
 function meditationScreen({ navigation }) {
-    (async () => {
-      await
-      await playbackObject.stopAsync()
-    })();
+  (async () => {
+    await playbackObject.stopAsync()
+    await meditationWalthrough1.loadAsync(require('./assets/med1.mp3'), initialStatus = {}, downloadFirst = true)
+    await meditationWalthrough1.playAsync()
+  })();
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text> Welcome to the Zen room</Text>
-      <Text> {'\n'} </Text>
-      <Button title="Go to Home" onPress={() => { (navigation.navigate('Home')); playbackObject.playAsync()}} />
+      <Text style={{ color: '#D4AF37', fontWeight:'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+        Welcome to the Zen Room! Currently playing is a mediation walkthrough from a Quarantine-Zone approved field expert. Please click the butons below to play/resume the audio, or go back to the home screen!
+        </Text>
+      <Button
+        title='Pause/Resume'
+        type="outline"
+        titleStyle={{
+          textAlignVertical: 'center',
+          color: "blue",
+          fontSize: 18,
+          fontWeight: 'bold'
+        }}
+        buttonStyle={{
+          backgroundColor: '#e0218a',
+          borderRadius: 6,
+          height: 50,
+          width: 100,
+        }}
+        onPress={() => { pauseResume(); i++ }}
+      />
+      <Separator />
+      <Hyperlink linkDefault={true}>
+        <Text style={{ fontSize: 15, textAlign: 'center', color: '#D4AF37', fontWeight:'bold' }}>
+          Please close your eyes and follow along with today's digital yoga instructor! When finished, click below for today's yoga exercise!
+    </Text>
+    <Text>{'\n'}</Text>
+        <Text style={{ color: 'blue', fontSize: 13, fontWeight: 'bold', textAlign: 'center' }}>
+          https://www.youtube.com/watch?v=d4S4twjeWTs
+    </Text>
+      </Hyperlink>
+      <Separator />
+      <Text style={{ color: '#D4AF37', fontSize: 13, fontWeight: 'bold', textAlign: 'center' }}>
+        Click on first image below for a link to free online yoga classes and the second image for free online mediation groups!
+    </Text>
+      <TouchableOpacity style={{ alignSelf: 'center' }}
+        onPress={() => Linking.openURL('https://www.thecut.com/2016/01/best-free-yoga-classes-online.html')}>
+        <Image
+          source={require('./assets/medpic3.jpg')}
+          style={{ height: 130, width: 150 }} />
+      </TouchableOpacity>
+      <TouchableOpacity style={{ alignSelf: 'center' }}
+        onPress={() => Linking.openURL('https://www.mindfulleader.org/meditate-together')}>
+        <Image
+          source={require('./assets/medpic2.jpg')}
+          style={{ height: 130, width: 150 }} />
+      </TouchableOpacity>
+      <Separator />
+      <Button title="Go to Home" onPress={() => { (navigation.navigate('Home')); meditationWalthrough1.stopAsync(); playbackObject.playAsync(); x = 2 }} />
     </View>
   );
 }
@@ -134,7 +197,7 @@ function spiritsScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text> Lift your spirits!</Text>
-      <Button title="Go to Home" onPress={() => { (navigation.navigate('Home')); playbackObject.playAsync()}} />
+      <Button title="Go to Home" onPress={() => { (navigation.navigate('Home')); playbackObject.playAsync() }} />
     </View>
   );
 }
@@ -146,7 +209,7 @@ function othersScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text> Hear from others!</Text>
-      <Button title="Go to Home" onPress={() => { (navigation.navigate('Home')); playbackObject.playAsync()}} />
+      <Button title="Go to Home" onPress={() => { (navigation.navigate('Home')); playbackObject.playAsync() }} />
     </View>
   );
 }
@@ -158,7 +221,7 @@ function suggestionsScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text> Suggestions from the community-- we'll get through this together!</Text>
-      <Button title="Go to Home" onPress={() => { (navigation.navigate('Home')); playbackObject.playAsync()}} />
+      <Button title="Go to Home" onPress={() => { (navigation.navigate('Home')); playbackObject.playAsync() }} />
     </View>
   );
 }
