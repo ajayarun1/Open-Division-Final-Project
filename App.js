@@ -55,12 +55,12 @@ function HomeScreen({ navigation }) {
         type="outline"
         titleStyle={{
           textAlignVertical: 'center',
-          color: "white",
+          color: "#5B0E2D",
           fontSize: 30,
           fontWeight: 'bold'
         }}
         buttonStyle={{
-          backgroundColor: '#e0218a',
+          backgroundColor: '#FFA781',
           borderRadius: 6,
           height: 50,
           width: 150,
@@ -74,12 +74,12 @@ function HomeScreen({ navigation }) {
         type="outline"
         titleStyle={{
           textAlignVertical: 'center',
-          color: "#FFDF00",
+          color: "#FBE473",
           fontSize: 30,
           fontWeight: 'bold'
         }}
         buttonStyle={{
-          backgroundColor: '#e0218a',
+          backgroundColor: '#812BCA',
           borderRadius: 6,
           height: 75,
           width: 150,
@@ -92,12 +92,12 @@ function HomeScreen({ navigation }) {
         type="outline"
         titleStyle={{
           textAlignVertical: 'center',
-          color: "blue",
+          color: '#2CF4F4',
           fontSize: 30,
           fontWeight: 'bold'
         }}
         buttonStyle={{
-          backgroundColor: '#e0218a',
+          backgroundColor: '#210070',
           borderRadius: 6,
           height: 80,
           width: 250,
@@ -134,8 +134,8 @@ function meditationScreen({ navigation }) {
     await meditationWalthrough1.playAsync()
   })();
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text style={{ color: '#D4AF37', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#FFA781' }}>
+      <Text style={{ color: '#5B0E2D', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
         Welcome to the Zen Room! Currently playing is a mediation walkthrough from a Quarantine-Zone approved field expert. Please click the butons below to play/resume the audio, or go back to the home screen!
         </Text>
       <Button
@@ -157,18 +157,18 @@ function meditationScreen({ navigation }) {
       />
       <Separator />
       <Hyperlink linkDefault={true}>
-        <Text style={{ fontSize: 15, textAlign: 'center', color: '#D4AF37', fontWeight: 'bold' }}>
+        <Text style={{ fontSize: 17, textAlign: 'center', color: '#5B0E2D', fontWeight: 'bold' }}>
           Please close your eyes and follow along with today's digital yoga instructor! When finished, click below for today's yoga exercise!
     </Text>
-        <Text>{'\n'}</Text>
         <Text style={{ color: 'blue', fontSize: 13, fontWeight: 'bold', textAlign: 'center' }}>
           https://www.youtube.com/watch?v=d4S4twjeWTs
     </Text>
       </Hyperlink>
       <Separator />
-      <Text style={{ color: '#D4AF37', fontSize: 13, fontWeight: 'bold', textAlign: 'center' }}>
+      <Text style={{ color: '#5B0E2D', fontSize: 13, fontWeight: 'bold', textAlign: 'center' }}>
         Click on first image below for a link to free online yoga classes and the second image for free online mediation groups!
     </Text>
+    <Text>{'\n'}</Text>
       <TouchableOpacity style={{ alignSelf: 'center' }}
         onPress={() => Linking.openURL('https://www.thecut.com/2016/01/best-free-yoga-classes-online.html')}>
         <Image
@@ -195,8 +195,8 @@ function spiritsScreen({ navigation }) {
   if (randNum == 0) {
     //Walk in and make you smile
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#FF69B4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#812BCA' }}>
+        <Text style={{ color: '#FBE473', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
           Need a quick little pick-me-up? Something to lighten up your mood, put a smile on your face? Well, you're in the right place!
       </Text>
         <Image
@@ -215,8 +215,8 @@ function spiritsScreen({ navigation }) {
   if (randNum == 1) {
     //Arial pizza
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#FF69B4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#812BCA' }}>
+        <Text style={{ color: '#FBE473', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
           Need a quick little pick-me-up? Something to lighten up your mood, put a smile on your face? Well, you're in the right place!
       </Text>
         <Image
@@ -235,8 +235,8 @@ function spiritsScreen({ navigation }) {
   if (randNum == 2) {
     //Kid getting a face full of mail
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#FF69B4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#812BCA' }}>
+        <Text style={{ color: '#FBE473', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
           Need a quick little pick-me-up? Something to lighten up your mood, put a smile on your face? Well, you're in the right place!
       </Text>
         <Image
@@ -255,8 +255,8 @@ function spiritsScreen({ navigation }) {
   if (randNum == 3) {
     //Dog in palm of hand
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#FF69B4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#812BCA' }}>
+        <Text style={{ color: '#FBE473', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
           Need a quick little pick-me-up? Something to lighten up your mood, put a smile on your face? Well, you're in the right place!
       </Text>
         <Image
@@ -275,8 +275,8 @@ function spiritsScreen({ navigation }) {
   if (randNum == 4) {
     //Random hug
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#FF69B4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#812BCA' }}>
+        <Text style={{ color: '#FBE473', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
           Need a quick little pick-me-up? Something to lighten up your mood, put a smile on your face? Well, you're in the right place!
       </Text>
         <Image
@@ -295,8 +295,8 @@ function spiritsScreen({ navigation }) {
   if (randNum == 5) {
     //Llamas
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#FF69B4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#812BCA' }}>
+        <Text style={{ color: '#FBE473', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
           Need a quick little pick-me-up? Something to lighten up your mood, put a smile on your face? Well, you're in the right place!
       </Text>
         <Image
@@ -315,8 +315,8 @@ function spiritsScreen({ navigation }) {
   if (randNum == 6) {
     //Cat jumping out of pepsi box
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#FF69B4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#812BCA' }}>
+        <Text style={{ color: '#FBE473', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
           Need a quick little pick-me-up? Something to lighten up your mood, put a smile on your face? Well, you're in the right place!
       </Text>
         <Image
@@ -335,8 +335,8 @@ function spiritsScreen({ navigation }) {
   if (randNum == 7) {
     //Cows
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#FF69B4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#812BCA' }}>
+        <Text style={{ color: '#FBE473', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
           Need a quick little pick-me-up? Something to lighten up your mood, put a smile on your face? Well, you're in the right place!
       </Text>
         <Image
@@ -355,8 +355,8 @@ function spiritsScreen({ navigation }) {
   if (randNum == 8) {
     //Cat with toy
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#FF69B4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#812BCA' }}>
+        <Text style={{ color: '#FBE473', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
           Need a quick little pick-me-up? Something to lighten up your mood, put a smile on your face? Well, you're in the right place!
       </Text>
         <Image
@@ -375,8 +375,8 @@ function spiritsScreen({ navigation }) {
   if (randNum == 9) {
     //Smiling at your crush
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#FF69B4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#812BCA' }}>
+        <Text style={{ color: '#FBE473', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
           Need a quick little pick-me-up? Something to lighten up your mood, put a smile on your face? Well, you're in the right place!
       </Text>
         <Image
@@ -395,8 +395,8 @@ function spiritsScreen({ navigation }) {
   if (randNum == 10) {
     //Old man in onion ring
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#FF69B4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#812BCA' }}>
+        <Text style={{ color: '#FBE473', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
           Need a quick little pick-me-up? Something to lighten up your mood, put a smile on your face? Well, you're in the right place!
       </Text>
         <Image
@@ -415,8 +415,8 @@ function spiritsScreen({ navigation }) {
   if (randNum == 11) {
     //Cat with paws stretched out
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#FF69B4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#812BCA' }}>
+        <Text style={{ color: '#FBE473', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
           Need a quick little pick-me-up? Something to lighten up your mood, put a smile on your face? Well, you're in the right place!
       </Text>
         <Image
@@ -435,8 +435,8 @@ function spiritsScreen({ navigation }) {
   if (randNum == 12) {
     //Elephant
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ color: '#FF69B4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#812BCA' }}>
+        <Text style={{ color: '#FBE473', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 15 }}>
           Need a quick little pick-me-up? Something to lighten up your mood, put a smile on your face? Well, you're in the right place!
       </Text>
         <Image
@@ -460,9 +460,77 @@ function othersScreen({ navigation }) {
       await playbackObject.stopAsync()
   })();
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text> Hear from others!</Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#210070' }}>
+      <Text style={{ color: '#2CF4F4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 125, margin: 18 }} >
+        Every week, 2 new Quarantine-Zone users will have the opportunity to share their experiences, activities, and thoughts, during this difficult time. Please email your submissions to quarantinezone.app@gmail.com! 2 new profiles will be posted every week
+      </Text>
+      <TouchableOpacity style={{ alignSelf: 'center' }}
+        onPress={() => { navigation.navigate('profileOne') }}>
+        <Image
+          source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQsg6KXHm6o4SYhPycSwdsJnlGOWCVyIhWBWcg5y8_pki6coDzG&usqp=CAU' }}
+          style={{ height: 130, width: 150 }} />
+        <Separator> </Separator>
+        <Text style={{color: '#2CF4F4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, margin:15}} >
+          Meet Sophia!
+        </Text>
+        <Separator></Separator>
+      </TouchableOpacity>
+      <Separator></Separator>
+      <TouchableOpacity style={{ alignSelf: 'center' }}
+        onPress={() => { navigation.navigate('profileTwo') }}>
+        <Image
+          source={{ uri: 'https://bloximages.chicago2.vip.townnews.com/qchron.com/content/tncms/assets/v3/editorial/6/c1/6c1ae802-c8d1-11e8-8273-4370cf9a2beb/5bb7b5fb65072.image.jpg' }}
+          style={{ height: 130, width: 150 }} />
+        <Separator> </Separator>
+        <Text style={{color: '#2CF4F4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, margin:15}} >
+          Meet Kris!
+        </Text>
+        <Separator></Separator>
+      </TouchableOpacity>
       <Button title="Go to Home" onPress={() => { (navigation.navigate('Home')); playbackObject.playAsync() }} />
+    </View>
+  );
+}
+function profileScreenOne({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#210070' }}>
+      <Image
+        source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQsg6KXHm6o4SYhPycSwdsJnlGOWCVyIhWBWcg5y8_pki6coDzG&usqp=CAU' }}
+        style={{ height: 130, width: 150 }} />
+        <Separator></Separator>
+      <Text style={{ color: '#2CF4F4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 250, margin: 15 }} >
+        Hi all, I'm Sophia! Personally I've just been extremely bored over this quarantine, and watching all the news reports about everything going on is stressing me out!
+        To keep myself busy however, I've developed an affinity for Yoga as of late! 100% would reccomend, I think the most important thing is to just keep a routine, or a set of activities
+        to keep you busy, otherwise we're bound to go crazy!
+</Text>
+<TouchableOpacity style={{ alignSelf: 'center' }}
+        onPress={() => Linking.openURL('https://www.thecut.com/2016/01/best-free-yoga-classes-online.html')}>
+        <Image
+          source={{ uri: 'https://instagram-brand.com/wp-content/themes/ig-branding/assets/images/ig-logo-email.png' }}
+          style={{ height: 85, width: 90, alignSelf: 'center' }} />
+        <Text style={{color: '#2CF4F4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, margin:15}} >
+          Feel free to check out Sophia's social media: leave her a nice comment, engage in a conversation, or even make a new friend!
+        </Text>
+      </TouchableOpacity>
+      <Separator></Separator>
+      <Button title="Go back" onPress={() => { (navigation.navigate('others')) }} />
+    </View>
+  );
+}
+function profileScreenTwo({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'#210070' }}>
+      <Image
+        source={{ uri: 'https://bloximages.chicago2.vip.townnews.com/qchron.com/content/tncms/assets/v3/editorial/6/c1/6c1ae802-c8d1-11e8-8273-4370cf9a2beb/5bb7b5fb65072.image.jpg' }}
+        style={{ height: 130, width: 150 }} />
+        <Separator></Separator>
+      <Text style={{ color: '#2CF4F4', fontWeight: 'bold', textAlign: 'center', fontSize: 18, lineHeight: 25, height: 350, margin: 15 }} >
+        What's up everybody, I'm Kris! I've struggled with anxiety for the past few years, and to be honest, COVID 19 and all its impacts are making it much harder to stay healthy.
+        I know there are many of you guys out there like me, and I just really want to spread not only my message of support and love, but some advice: don't abandon your resources!
+        There are so many support-groups and mental health resources available online, if you find yourself in need of some help, use them. I know they have helped me a ton, and continue
+        to do tons of good out there in the world. Stay Strong everybody!
+</Text>
+      <Button title="Go back" onPress={() => { (navigation.navigate('others')) }} />
     </View>
   );
 }
@@ -488,7 +556,7 @@ function App() {
             headerStyle: {
               backgroundColor: '#007600',
             },
-            headerTintColor: '#FFFFFF',
+            headerTintColor: '#e0218a',
             headerTitleStyle: {
               fontWeight: 'bold',
               fontSize: 30
@@ -502,7 +570,7 @@ function App() {
             headerStyle: {
               backgroundColor: '#007600',
             },
-            headerTintColor: '#FFFFFF',
+            headerTintColor: '#5B0E2D',
             headerTitleStyle: {
               fontWeight: 'bold',
               fontSize: 30
@@ -515,7 +583,7 @@ function App() {
             headerStyle: {
               backgroundColor: '#007600',
             },
-            headerTintColor: '#FFFFFF',
+            headerTintColor: '#FBE473',
             headerTitleStyle: {
               fontWeight: 'bold',
               fontSize: 30
@@ -528,7 +596,7 @@ function App() {
             headerStyle: {
               backgroundColor: '#007600',
             },
-            headerTintColor: '#FFFFFF',
+            headerTintColor: '#2CF4F4',
             headerTitleStyle: {
               fontWeight: 'bold',
               fontSize: 30
@@ -542,6 +610,32 @@ function App() {
               backgroundColor: '#007600',
             },
             headerTintColor: '#FFFFFF',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 30
+            },
+          }}
+        />
+        <Stack.Screen name="profileOne" component={profileScreenOne}
+          options={{
+            title: 'Meet Sophia!',
+            headerStyle: {
+              backgroundColor: '#007600',
+            },
+            headerTintColor: '#2CF4F4',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 30
+            },
+          }}
+        />
+        <Stack.Screen name="profileTwo" component={profileScreenTwo}
+          options={{
+            title: 'Meet Derek!',
+            headerStyle: {
+              backgroundColor: '#007600',
+            },
+            headerTintColor: '#2CF4F4',
             headerTitleStyle: {
               fontWeight: 'bold',
               fontSize: 30
